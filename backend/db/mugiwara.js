@@ -1,10 +1,171 @@
 const mongoose = require('mongoose');
-const MugiwaraModel = require("../model/mugiwaraModel");
+const crewModel = require('../Model/mugiwaraModel')
+mongoose.connect( "mongodb://127.0.0.1:27017/OnePiece", { useNewUrlParser: true });
 
-const arrayCrew = [
-  {
-    equipage: {
-      capitaine: {
+// let CrewMembres = [ 
+//   {
+//     equipage: {
+//       capitaine: {
+//         nom: "Monkey D. Luffy",
+//         fruit_du_demon: "Gomu Gomu no Mi",
+//         armes: ["Aucune"],
+//         age: 24,
+//         taille: "1,72 m",
+//         genre: "Homme",
+//         ile_naissance: "East Blue",
+//         reve: "Devenir le Roi des Pirates",
+//         prime: "1,5 milliard de berrys",
+//         affiliations: ["Pirates au Chapeau de Paille"],
+//         image: "luffy.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//       premier_lieutenant: {
+//         nom: "Roronoa Zoro",
+//         armes: ["Wado Ichimonji", "Sandai Kitetsu", "Shusui"],
+//         fruit_du_demon: "Aucun",
+//         age: 28,
+//         taille: "1,81 m",
+//         genre: "Homme",
+//         ile_naissance: "East Blue",
+//         reve: "Devenir le meilleur épéiste du monde",
+//         prime: "320 millions de berrys",
+//         affiliations: ["Pirates au Chapeau de Paille"],
+//         image: "zoro.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//       navigatrice: {
+//         nom: "Nami",
+//         armes: ["Sorcery Climat-Tact ", "Baguette Climatique"],
+//         fruit_du_demon: "Aucun",
+//         age: 22,
+//         taille: "1,69 m",
+//         genre: "Femme",
+//         ile_naissance: "Cocoyasi",
+//         reve: "Cartographier le monde entier",
+//         prime: "66 millions de berrys",
+//         affiliations: ["Pirates au Chapeau de Paille"],
+//         image: "nami.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//       tireur_d_elite: {
+//         nom: "Usopp",
+//         armes: ["Fronde"],
+//         fruit_du_demon: "Aucun",
+//         age: 30,
+//         taille: "1,74 m",
+//         genre: "Homme",
+//         ile_naissance: "Syrup",
+//         reve: "Devenir un brave guerrier des mers",
+//         prime: "300 millions de berrys",
+//         affiliations: ["Pirates au Chapeau de Paille"],
+//         image: "usopp.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//       chef: {
+//         nom: "Sanji",
+//         armes: ["Aucune"],
+//         fruit_du_demon: "Aucun",
+//         age: 29,
+//         taille: "1,80 m",
+//         genre: "Homme",
+//         ile_naissance: "North Blue",
+//         reve: "Trouver All Blue",
+//         prime: "330 millions de berrys",
+//         affiliations: ["Pirates au Chapeau de Paille"],
+//         image: "sanji.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//       medecin: {
+//         nom: "Chopper",
+//         armes: ["Aucune"],
+//         fruit_du_demon: "Hito Hito no Mi",
+//         taille: "90 cm",
+//         age: 17,
+//         genre: "Homme",
+//         ile_de_naissance: "Drum",
+//         reve: "Devenir un grand médecin capable de soigner toutes les maladies",
+//         prime: "1,000 Berrys",
+//         affiliations: [
+//           "Pirate du Chapeau de Paille",
+//           "Équipage des Guerriers de la Mer",
+//         ],
+//         poster_path: "/chemin/vers/chopper.jpg",
+//       },
+//       archeologue: {
+//         nom: "Robin",
+//         armes: ["Aucune"],
+//         fruit_du_demon: "Hana Hana no Mi",
+//         taille: "188 cm",
+//         age: 30,
+//         genre: "Femme",
+//         ile_de_naissance: "Ohara",
+//         reve: "Découvrir la vérité sur le Siècle Oublié",
+//         prime: "930,000,000 Berrys",
+//         affiliations: [
+//           "Pirate du Chapeau de Paille",
+//           "Gouvernement Mondial (anciennement)",
+//         ],
+//         image: "sanji.jpg",
+//         poster_path: "/chemin/vers/robin.jpg",
+//       },
+//       charpentier_naval: {
+//         nom: "Franky",
+//         armes: ["Sunny"],
+//         fruit_du_demon: "Aucun",
+//         taille: "240 cm",
+//         age: 36,
+//         genre: "Homme",
+//         ile_de_naissance: "Water 7",
+//         reve: "Construire un bateau capable de naviguer sur toutes les mers",
+//         prime: "900,000,000 Berrys",
+//         affiliations: [
+//           "Pirate du Chapeau de Paille",
+//           "Tom's Workers (anciennement)",
+//         ],
+//         image: "sanji.jpg",
+//         poster_path: "/chemin/vers/franky.jpg",
+//       },
+//       musicien: {
+//         nom: "Brook",
+//         armes: ["Sabre"],
+//         fruit_du_demon: "Yomi Yomi no Mi",
+//         taille: "277 cm",
+//         age: 90,
+//         genre: "Homme",
+//         ile_de_naissance: "West Blue",
+//         reve: "Retrouver Laboon, la baleine qu'il a promis de revoir",
+//         prime: "393,000,000 Berrys",
+//         affiliations: [
+//           "Pirate du Chapeau de Paille",
+//           "Rumba Pirates (anciennement)",
+//         ],
+//         image: "sanji.jpg",
+//         poster_path: "/chemin/vers/brook.jpg",
+//       },
+//       pilier: {
+//         nom: "Jinbei",
+//         taille: "301 cm",
+//         armes: ["Aucun"],
+//         fruit_du_demon: "Aucun",
+//         age: 46,
+//         genre: "Homme",
+//         ile_de_naissance: "Fishman Island",
+//         reve: "Créer une entente pacifique entre les humains et les poissons",
+//         prime: "600,000,000 Berrys",
+//         affiliations: [
+//           "Pirate du Chapeau de Paille",
+//           "Capitaine des Pirates du Soleil (anciennement)",
+//         ],
+//         image: "sanji.jpg",
+//         poster_path: "/chemin/vers/jinbei.jpg",
+//       },
+//     },
+//   },
+// ];
+
+
+let CrewMembres = [ 
+    {
         nom: "Monkey D. Luffy",
         fruit_du_demon: "Gomu Gomu no Mi",
         armes: ["Aucune"],
@@ -17,8 +178,8 @@ const arrayCrew = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "luffy.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
-      },
-      premier_lieutenant: {
+    },
+    {
         nom: "Roronoa Zoro",
         armes: ["Wado Ichimonji", "Sandai Kitetsu", "Shusui"],
         fruit_du_demon: "Aucun",
@@ -32,7 +193,7 @@ const arrayCrew = [
         image: "zoro.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
       },
-      navigatrice: {
+      {
         nom: "Nami",
         armes: ["Sorcery Climat-Tact ", "Baguette Climatique"],
         fruit_du_demon: "Aucun",
@@ -46,7 +207,7 @@ const arrayCrew = [
         image: "nami.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
       },
-      tireur_d_elite: {
+      {
         nom: "Usopp",
         armes: ["Fronde"],
         fruit_du_demon: "Aucun",
@@ -60,7 +221,7 @@ const arrayCrew = [
         image: "usopp.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
       },
-      chef: {
+      {
         nom: "Sanji",
         armes: ["Aucune"],
         fruit_du_demon: "Aucun",
@@ -74,13 +235,13 @@ const arrayCrew = [
         image: "sanji.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
       },
-      medecin: {
+      {
         nom: "Chopper",
         armes: ["Aucune"],
         fruit_du_demon: "Hito Hito no Mi",
         taille: "90 cm",
-        age: "17 ans",
-        genre: "masculin",
+        age: 17,
+        genre: "Homme",
         ile_de_naissance: "Drum",
         reve: "Devenir un grand médecin capable de soigner toutes les maladies",
         prime: "1,000 Berrys",
@@ -90,13 +251,13 @@ const arrayCrew = [
         ],
         poster_path: "/chemin/vers/chopper.jpg",
       },
-      archeologue: {
+      {
         nom: "Robin",
         armes: ["Aucune"],
         fruit_du_demon: "Hana Hana no Mi",
         taille: "188 cm",
-        age: "30 ans",
-        genre: "féminin",
+        age: 30,
+        genre: "Femme",
         ile_de_naissance: "Ohara",
         reve: "Découvrir la vérité sur le Siècle Oublié",
         prime: "930,000,000 Berrys",
@@ -107,13 +268,13 @@ const arrayCrew = [
         image: "sanji.jpg",
         poster_path: "/chemin/vers/robin.jpg",
       },
-      charpentier_naval: {
+      {
         nom: "Franky",
         armes: ["Sunny"],
         fruit_du_demon: "Aucun",
         taille: "240 cm",
-        age: "36 ans",
-        genre: "masculin",
+        age: 36,
+        genre: "Homme",
         ile_de_naissance: "Water 7",
         reve: "Construire un bateau capable de naviguer sur toutes les mers",
         prime: "900,000,000 Berrys",
@@ -124,13 +285,13 @@ const arrayCrew = [
         image: "sanji.jpg",
         poster_path: "/chemin/vers/franky.jpg",
       },
-      musicien: {
+      {
         nom: "Brook",
         armes: ["Sabre"],
         fruit_du_demon: "Yomi Yomi no Mi",
         taille: "277 cm",
-        age: "90 ans",
-        genre: "masculin",
+        age: 90,
+        genre: "Homme",
         ile_de_naissance: "West Blue",
         reve: "Retrouver Laboon, la baleine qu'il a promis de revoir",
         prime: "393,000,000 Berrys",
@@ -141,11 +302,13 @@ const arrayCrew = [
         image: "sanji.jpg",
         poster_path: "/chemin/vers/brook.jpg",
       },
-      pilier: {
+      {
         nom: "Jinbei",
         taille: "301 cm",
-        age: "46 ans",
-        genre: "masculin",
+        armes: ["Aucun"],
+        fruit_du_demon: "Aucun",
+        age: 46,
+        genre: "Homme",
         ile_de_naissance: "Fishman Island",
         reve: "Créer une entente pacifique entre les humains et les poissons",
         prime: "600,000,000 Berrys",
@@ -155,17 +318,16 @@ const arrayCrew = [
         ],
         image: "sanji.jpg",
         poster_path: "/chemin/vers/jinbei.jpg",
-      },
-    },
-  },
+      }
 ];
 
-MugiwaraModel.insertMany(arrayCrew, function(error, docs) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('Documents insérés :', docs.length);
-  }
-});
 
+
+crewModel.insertMany(CrewMembres)
+  .then(function(docs) {
+    console.log('Multiple products inserted:', docs);
+  })
+  .catch(function(err) {
+    console.error('Error inserting products:', err);
+  });
 

@@ -4,7 +4,6 @@ const AllCrew = async (req, res) => {
     try {
         const users = await MugiwaraModel.find({})
         res.json(users)
-        console.log(users)
     } catch (error){
         res.status(500).json({message : error.message})
     }
@@ -25,7 +24,7 @@ const singleCrew = async (req, res) => {
        await crew.save()
         res.json(crew)
     } catch (error) {
-       res.status(500).json({ message: err.message});
+       res.status(500).json({ message: error.message});
     }
  }
 
