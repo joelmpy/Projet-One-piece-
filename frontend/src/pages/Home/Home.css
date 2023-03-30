@@ -1,0 +1,19 @@
+.header {
+    background-image: url("https://i.pinimg.com/originals/39/98/c0/3998c0dfe9bd70214c773dd6c1a813d4.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 10px 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+
+/* .header::after {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(19, 16, 16, 0.667);
+    min-height: 100vh;
+} */
