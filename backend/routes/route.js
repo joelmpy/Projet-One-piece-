@@ -7,7 +7,7 @@ const {singleCrew, AllCrew, crewPost} = require('../controllers/MugiwaraControll
 router.get('/Onepiece', AllCrew)
 
 // get single perso //
-router.get('/Onepiece/:id', singleCrew)
+router.get('/Onepiece/:slug', singleCrew)
 
 // method Post new Perso // 
 router.post('/Onepiece', crewPost)

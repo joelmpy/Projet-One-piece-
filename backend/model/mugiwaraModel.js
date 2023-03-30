@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const slugify = require('slugify');
 
 const crewSchema = new Schema({
   nom: {
@@ -50,7 +51,11 @@ const crewSchema = new Schema({
   prime_poster: { 
     type: String 
   },
+  slug: String,
+  // equipage:"mugiwara"
 });
+
+
 
 const crewModel = mongoose.model("Mugiwara", crewSchema);
 

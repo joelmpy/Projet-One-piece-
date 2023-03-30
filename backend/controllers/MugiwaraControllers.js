@@ -10,12 +10,9 @@ const AllCrew = async (req, res) => {
 }
 
 const singleCrew = async (req, res) => {
-    try {
-        const user = await MugiwaraModel.find({_id : req.params.id})
+    const user = await MugiwaraModel.find({slug : req.params.slug})
+    console.log(user);
        res.json(user[0])
-      } catch (err) {
-      res.status(500).json({ message: err.message });
-      }
  }
 
  const crewPost = async (req, res) => {

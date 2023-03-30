@@ -176,9 +176,10 @@ let CrewMembres = [
         reve: "Devenir le Roi des Pirates",
         prime: "3 milliard de berrys",
         affiliations: ["Pirates au Chapeau de Paille"],
-        image: "https://www.melty.fr/wp-content/uploads/meltyfr/2022/02/media-39399-750x410.jpg",
-        poster_path: "https://i.pinimg.com/originals/a2/02/65/a202654d41b139bf0d1f0ca304373536.jpg",
-        prime_poster : "https://i.pinimg.com/originals/26/58/c0/2658c0258a262c9740ab7f6396e15fa2.jpg"
+        image: "https://i.pinimg.com/originals/1f/7f/d2/1f7fd24f43efc419393c64990db819f7.jpg",
+        poster_path: "https://images6.alphacoders.com/128/1286891.png",
+        prime_poster : "https://i.pinimg.com/originals/26/58/c0/2658c0258a262c9740ab7f6396e15fa2.jpg",
+        slug:"luffy"
     },
     {
         nom: "Roronoa Zoro",
@@ -193,7 +194,8 @@ let CrewMembres = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/80/4d/a1/804da11cd9023587ab6a4a5628ff78d1.jpg",
         poster_path: "https://i.pinimg.com/originals/49/e5/6c/49e56cfefcc2ede8fbf9e527aa20cb67.jpg",
-        prime_poster : "https://i.pinimg.com/originals/17/8f/41/178f41f15d210b6eb05d49164a75b560.jpg"
+        prime_poster : "https://i.pinimg.com/originals/17/8f/41/178f41f15d210b6eb05d49164a75b560.jpg",
+        slug:"roronoa-zoro"
       },
       {
         nom: "Nami",
@@ -208,7 +210,8 @@ let CrewMembres = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/eb/f9/d1/ebf9d12cf627e246435eefc9c93c336c.jpg",
         poster_path: "https://i.pinimg.com/originals/f5/04/e4/f504e4514131d7a6a7d9a110686343bd.jpg",
-        prime_poster : "https://i.pinimg.com/originals/b6/12/fc/b612fc03a99c036b87a90fb446dc0cd2.jpg"
+        prime_poster : "https://i.pinimg.com/originals/b6/12/fc/b612fc03a99c036b87a90fb446dc0cd2.jpg",
+        slug:"nami"
       },
       {
         nom: "Usopp",
@@ -223,7 +226,8 @@ let CrewMembres = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/ac/3b/90/ac3b90ffd6cccdba348ba518929083df.jpg",
         poster_path: "https://i.pinimg.com/originals/e4/26/a2/e426a2d0c91e54d8dd3fc04004bd02c4.jpg",
-        prime_poster : "https://i.pinimg.com/originals/ec/3b/ea/ec3beada52663335713e4e1c9e7e6416.jpg"
+        prime_poster : "https://i.pinimg.com/originals/ec/3b/ea/ec3beada52663335713e4e1c9e7e6416.jpg",
+        slug:"usopp"
       },
       {
         nom: "Sanji",
@@ -238,7 +242,8 @@ let CrewMembres = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/ef/4b/22/ef4b2250c712f4c191d742300763d548.jpg",
         poster_path: "https://i.pinimg.com/originals/83/58/ca/8358ca68ae9ba99ca132610d68d60171.jpg",
-        prime_poster : "https://i.pinimg.com/originals/87/24/f4/8724f42621190c452e7a7101b5f5e0fd.jpg"
+        prime_poster : "https://i.pinimg.com/originals/87/24/f4/8724f42621190c452e7a7101b5f5e0fd.jpg",
+        slug:"sanji"
       },
       {
         nom: "Chopper",
@@ -254,9 +259,10 @@ let CrewMembres = [
           "Pirate du Chapeau de Paille",
           "Équipage des Guerriers de la Mer",
         ],
-        poster_path: "https://i.pinimg.com/originals/01/cb/93/01cb93670fc2a11d340925578111f507.jpg",
-        prime_poster : "https://i.pinimg.com/originals/4c/c1/0d/4cc10dc1a31eef73941e3f3d08423eb2.jpg",
-        prime_poster : "https://i.pinimg.com/originals/e3/a9/7f/e3a97faad893eb1ff651f7e94e5a0941.jpg"
+        image: "https://i.pinimg.com/originals/01/cb/93/01cb93670fc2a11d340925578111f507.jpg",
+        poster_path : "https://i.pinimg.com/originals/4c/c1/0d/4cc10dc1a31eef73941e3f3d08423eb2.jpg",
+        prime_poster : "https://i.pinimg.com/originals/e3/a9/7f/e3a97faad893eb1ff651f7e94e5a0941.jpg",
+        slug:"chopper"
       },
       {
         nom: "Robin",
@@ -272,10 +278,10 @@ let CrewMembres = [
           "Pirate du Chapeau de Paille",
           "Gouvernement Mondial (anciennement)",
         ],
-        image: "sanji.jpg",
-        poster_path: "https://i.pinimg.com/originals/f7/f0/c3/f7f0c3a27feca210f8b53edc33936ad8.jpg",
-        prime_poster : "https://i.pinimg.com/originals/57/df/d1/57dfd167c6bea39390157b7b33fabf79.jpg",
-        prime_poster : "https://i.pinimg.com/originals/e3/8f/19/e38f19c8c1f548a675b9d9ec09f277aa.jpg"
+        image: "https://i.pinimg.com/originals/f7/f0/c3/f7f0c3a27feca210f8b53edc33936ad8.jpg",
+        poster_path : "https://i.pinimg.com/originals/57/df/d1/57dfd167c6bea39390157b7b33fabf79.jpg",
+        prime_poster : "https://i.pinimg.com/originals/e3/8f/19/e38f19c8c1f548a675b9d9ec09f277aa.jpg",
+        slug:"robin"
       },
       {
         nom: "Franky",
@@ -291,9 +297,10 @@ let CrewMembres = [
           "Pirate du Chapeau de Paille",
           "Tom's Workers (anciennement)",
         ],
-        image: "https://i.pinimg.com/originals/bc/1c/da/bc1cda7c0039bd1a756fa39f4e71c64e.jpg",
+        image: "https://i.pinimg.com/originals/92/c4/17/92c417869e640fa16b979c30c6769fb7.jpg",
         poster_path: "https://i.pinimg.com/originals/78/8d/18/788d1888eddf64ac525abc7c9b4de7cd.jpg",
-        prime_poster : "https://i.pinimg.com/originals/be/12/8e/be128ed2f6b00375abb1f991e53ad35e.jpg"
+        prime_poster : "https://i.pinimg.com/originals/be/12/8e/be128ed2f6b00375abb1f991e53ad35e.jpg",
+        slug:"franky"
       },
       {
         nom: "Brook",
@@ -311,7 +318,8 @@ let CrewMembres = [
         ],
         image: "https://i.pinimg.com/originals/a8/14/a4/a814a4ed560b75f568092b475c00ae4c.jpg",
         poster_path: "https://i.pinimg.com/originals/ad/9b/8d/ad9b8d353b2f0b50afed01463999c9ec.jpg",
-        prime_poster : "https://i.pinimg.com/originals/b2/15/3e/b2153ed0af210f4f3659b9d295ad92d1.jpg"
+        prime_poster : "https://i.pinimg.com/originals/b2/15/3e/b2153ed0af210f4f3659b9d295ad92d1.jpg",
+        slug:"brook"
       },
       {
         nom: "Jinbei",
@@ -329,7 +337,8 @@ let CrewMembres = [
         ],
         image: "https://i.pinimg.com/originals/ae/07/34/ae0734a97603af3dfd73da6307aed3e8.jpg",
         poster_path: "https://i.pinimg.com/originals/01/6d/ea/016deab00ce8b093391651d3cd8a8183.jpg",
-        prime_poster : "https://i.pinimg.com/originals/60/40/e5/6040e513506b03d6175ab664ec5cdc6e.jpg"
+        prime_poster : "https://i.pinimg.com/originals/60/40/e5/6040e513506b03d6175ab664ec5cdc6e.jpg",
+        slug:"jinbei"
       }
 ];
 
