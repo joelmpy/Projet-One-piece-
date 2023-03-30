@@ -1,38 +1,50 @@
 import React from 'react'
 import "../CardDetail/CardDetail.css"
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+
 
 function CardDetail() {
 
-    const [list, setList] = useState([])
-    const {id} = useParams()
+    const [list, setList] = useState(null)
+    const [loading, setLoading] = useState(true);
+    const { slug } = useParams()
 
     const listPerso = () => {
-        const url = `http://localhost:8001/onepiece${id}`
-        fetch(url)
-        .then((reponse) => {
-            if(reponse.ok){
-                return reponse.json()
-            } 
-            throw new Error("Something went wrong");
-        })
-        .then(data => setList(data))
-        .catch((error) => {
-            console.log("Error", error);
-        })   
-    
+        fetch(`http://localhost:8001/onepiece/${slug}`)
+            .then((reponse) => {
+                if (reponse.ok) {
+                    return reponse.json()
+                }
+                throw new Error("Something went wrong");
+            })
+            .then(data => {
+                setList(data)
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.log("Error", error);
+            })
+
     }
 
     useEffect(() => {
         listPerso()
-    }, [id])
+        window.scrollTo(0, 0);
+    }, [slug])
 
-  return (
-    <div>
-        
-    </div>
-  )
+    if (loading) {
+        return <div>Chargement...</div>;
+    }
+
+    return (
+        <div className='list'>
+            <h1>Profil de l'utilisateur</h1>
+            <p>Nom : {list.nom}</p>
+            <p>Email : {list.age}</p>
+            <img src={list.poster_path} alt="" srcset="" />
+        </div>
+    )
 }
 
 export default CardDetail
