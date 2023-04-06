@@ -25,6 +25,9 @@ function Header() {
             <li>
               <Link to="/Personnage">Personnage</Link>
             </li>
+            <li>
+              <Link to="/Add">Ajouter</Link>
+            </li>
           </ul>
           <button
             className="mobile-menu-icon"

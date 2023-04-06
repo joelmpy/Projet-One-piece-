@@ -38,11 +38,26 @@ function CardDetail() {
     }
 
     return (
-        <div className='list'>
-            <h1>Profil de l'utilisateur</h1>
-            <p>Nom : {list.nom}</p>
-            <p>Email : {list.age}</p>
-            <img src={list.poster_path} alt="" srcset="" />
+        <div className='card-detail'>
+            <div className='card-detail-poster'>
+                <img src={list.poster_path} alt="" srcset="" />
+                <figcaption className='overlay'></figcaption>
+            </div>
+            <div className='card-poster_path'>
+                <img src={list.prime_poster} alt="" className='poster_path_prime' />
+                <div className='list-detail'>
+                <p><span>Nom : </span>{list.nom}</p>
+                <p><span>Fruits du démon : </span>{list.fruit_du_demon}</p>
+                <p><span>Armes : </span>{list.armes}</p>
+                <p><span>Taille :</span>{list.taille}</p>
+                <p><span>Age :</span>{list.age}ans</p>
+                <p><span>Genre : </span>{list.genre}</p>
+                <p><span>Reve : </span>{list.reve}</p>
+                <p><span>Affiliations : </span>{list.affiliations[0]}{list.affiliations[1]}</p>
+                </div>
+            </div>
+         
+
         </div>
     )
 }

@@ -1,5 +1,97 @@
-.list img{
+/* .black-color {
+    background-color: #000000ac;
+    width: 100%;
+    height: 100vh;
+} */
+
+.card-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-detail-poster {
+    position: relative;
+    width: 100%;
+}
+
+.card-detail-poster img{
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    vertical-align: middle;
 }
+
+.card-detail-poster .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ac !important;
+    /* background-color: rgba(0,0,0, .5); */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; */
+}
+
+
+.card-poster_path {
+    position: absolute;
+    top: 33%;
+    left: 7%;
+    width: 90%;
+    vertical-align: middle;
+    /* background-color: rgba(32, 32, 32, 0.5); */
+    display: flex;
+
+}
+
+.card-poster_path .poster_path_prime {
+    width:300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-poster_path .list-detail {
+    padding: 1rem;
+}
+
+.card-poster_path .list-detail p {
+    color: white;
+    margin: .3rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.card-poster_path .list-detail span {
+    font-size: clamp(1rem, 2.3vw, 1.4rem);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 0.2rem;
+}
+
+
+
+/* .poster_path{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.19rem;
+    cursor: pointer;
+    width: 250px;
+    height: 270px;
+    z-index: 0;
+    border: 1px solid rgb(99, 99, 99);
+    color: black;
+} */
+
+/* .poster_path .poster_path_prime {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+} */
