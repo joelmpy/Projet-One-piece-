@@ -178,7 +178,7 @@ let CrewMembres = [
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/1f/7f/d2/1f7fd24f43efc419393c64990db819f7.jpg",
         poster_path: "https://images6.alphacoders.com/128/1286891.png",
-        prime_poster : "https://i.pinimg.com/originals/26/58/c0/2658c0258a262c9740ab7f6396e15fa2.jpg",
+        prime_poster : "https://i.pinimg.com/originals/9e/fd/c7/9efdc774b01fedff042dd90c96dd4895.jpg",
         slug:"luffy"
     },
     {
@@ -193,9 +193,9 @@ let CrewMembres = [
         prime: "1,111 milliard de berrys",
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/80/4d/a1/804da11cd9023587ab6a4a5628ff78d1.jpg",
-        poster_path: "https://i.pinimg.com/originals/49/e5/6c/49e56cfefcc2ede8fbf9e527aa20cb67.jpg",
+        poster_path: "https://i.pinimg.com/originals/82/13/38/8213383c39b881281a9979a70ca55046.jpg",
         prime_poster : "https://i.pinimg.com/originals/17/8f/41/178f41f15d210b6eb05d49164a75b560.jpg",
-        slug:"roronoa-zoro"
+        slug:"zoro"
       },
       {
         nom: "Nami",
@@ -209,8 +209,8 @@ let CrewMembres = [
         prime: "366 millions de berrys",
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/eb/f9/d1/ebf9d12cf627e246435eefc9c93c336c.jpg",
-        poster_path: "https://i.pinimg.com/originals/f5/04/e4/f504e4514131d7a6a7d9a110686343bd.jpg",
-        prime_poster : "https://i.pinimg.com/originals/b6/12/fc/b612fc03a99c036b87a90fb446dc0cd2.jpg",
+        poster_path: "https://i.pinimg.com/originals/ad/b0/19/adb0194d48360ee289b1a0071faceb7b.jpg",
+        prime_poster : "https://i.pinimg.com/originals/39/04/92/390492a72899cf32e2172784839ee670.jpg",
         slug:"nami"
       },
       {
@@ -225,7 +225,7 @@ let CrewMembres = [
         prime: "500 millions de berrys",
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/ac/3b/90/ac3b90ffd6cccdba348ba518929083df.jpg",
-        poster_path: "https://i.pinimg.com/originals/e4/26/a2/e426a2d0c91e54d8dd3fc04004bd02c4.jpg",
+        poster_path: "https://i.pinimg.com/originals/3b/ca/50/3bca500e4fb7bbdbde912f998d92b77b.jpg",
         prime_poster : "https://i.pinimg.com/originals/ec/3b/ea/ec3beada52663335713e4e1c9e7e6416.jpg",
         slug:"usopp"
       },
@@ -241,7 +241,7 @@ let CrewMembres = [
         prime: "1, 032 milliard de berry",
         affiliations: ["Pirates au Chapeau de Paille"],
         image: "https://i.pinimg.com/originals/ef/4b/22/ef4b2250c712f4c191d742300763d548.jpg",
-        poster_path: "https://i.pinimg.com/originals/83/58/ca/8358ca68ae9ba99ca132610d68d60171.jpg",
+        poster_path: "https://i.pinimg.com/originals/f0/f0/f8/f0f0f8f7245a31ef407ef2e2491220e4.jpg",
         prime_poster : "https://i.pinimg.com/originals/87/24/f4/8724f42621190c452e7a7101b5f5e0fd.jpg",
         slug:"sanji"
       },
@@ -260,8 +260,8 @@ let CrewMembres = [
           "Équipage des Guerriers de la Mer",
         ],
         image: "https://i.pinimg.com/originals/01/cb/93/01cb93670fc2a11d340925578111f507.jpg",
-        poster_path : "https://i.pinimg.com/originals/4c/c1/0d/4cc10dc1a31eef73941e3f3d08423eb2.jpg",
-        prime_poster : "https://i.pinimg.com/originals/e3/a9/7f/e3a97faad893eb1ff651f7e94e5a0941.jpg",
+        poster_path : "https://images5.alphacoders.com/971/971570.jpg",
+        prime_poster : "https://i.pinimg.com/originals/c9/ee/66/c9ee6640bcfc45420c096be02edb866c.jpg",
         slug:"chopper"
       },
       {
@@ -279,7 +279,7 @@ let CrewMembres = [
           "Gouvernement Mondial (anciennement)",
         ],
         image: "https://i.pinimg.com/originals/f7/f0/c3/f7f0c3a27feca210f8b53edc33936ad8.jpg",
-        poster_path : "https://i.pinimg.com/originals/57/df/d1/57dfd167c6bea39390157b7b33fabf79.jpg",
+        poster_path : "https://images4.alphacoders.com/183/183418.jpg",
         prime_poster : "https://i.pinimg.com/originals/e3/8f/19/e38f19c8c1f548a675b9d9ec09f277aa.jpg",
         slug:"robin"
       },
@@ -298,7 +298,7 @@ let CrewMembres = [
           "Tom's Workers (anciennement)",
         ],
         image: "https://i.pinimg.com/originals/92/c4/17/92c417869e640fa16b979c30c6769fb7.jpg",
-        poster_path: "https://i.pinimg.com/originals/78/8d/18/788d1888eddf64ac525abc7c9b4de7cd.jpg",
+        poster_path: "https://wallpapercave.com/wp/wp7135409.jpg",
         prime_poster : "https://i.pinimg.com/originals/be/12/8e/be128ed2f6b00375abb1f991e53ad35e.jpg",
         slug:"franky"
       },
@@ -317,8 +317,8 @@ let CrewMembres = [
           "Rumba Pirates (anciennement)",
         ],
         image: "https://i.pinimg.com/originals/a8/14/a4/a814a4ed560b75f568092b475c00ae4c.jpg",
-        poster_path: "https://i.pinimg.com/originals/ad/9b/8d/ad9b8d353b2f0b50afed01463999c9ec.jpg",
-        prime_poster : "https://i.pinimg.com/originals/b2/15/3e/b2153ed0af210f4f3659b9d295ad92d1.jpg",
+        poster_path: "https://wallpapercave.com/wp/wp2156072.png",
+        prime_poster : "https://i.pinimg.com/originals/19/54/9f/19549f98f77a69dda0483e135013c549.jpg",
         slug:"brook"
       },
       {
@@ -336,7 +336,7 @@ let CrewMembres = [
           "Capitaine des Pirates du Soleil (anciennement)",
         ],
         image: "https://i.pinimg.com/originals/ae/07/34/ae0734a97603af3dfd73da6307aed3e8.jpg",
-        poster_path: "https://i.pinimg.com/originals/01/6d/ea/016deab00ce8b093391651d3cd8a8183.jpg",
+        poster_path: "https://wallpapercave.com/wp/wp3813525.png",
         prime_poster : "https://i.pinimg.com/originals/60/40/e5/6040e513506b03d6175ab664ec5cdc6e.jpg",
         slug:"jinbei"
       }
