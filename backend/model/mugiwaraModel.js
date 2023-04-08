@@ -5,7 +5,7 @@ const slugify = require('slugify');
 const crewSchema = new Schema({
   nom: {
     type: String,
-    required: true,
+    // required: true,
   },
   armes: {
     type: [String],
