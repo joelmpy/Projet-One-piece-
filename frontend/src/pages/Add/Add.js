@@ -1,67 +1,110 @@
 import React from 'react'
 import { useState } from 'react'
+import "./Add.css"
 
 function Add() {
 
   const [add, setAdd] = useState({})
+  const [profileImage, setProfileImage] = useState(null);
+  const [coverImage, setCoverImage] = useState(null);
+  const [primeImage, setPrimeImage] = useState(null);
+
+
+  const handleProfileImageChange = event => {
+    setProfileImage(event.target.files[0]);
+  };
+
+  const handleCoverImageChange = event => {
+    setCoverImage(event.target.files[0]);
+  };
+
+  const handlePrimeImageChange = event => {
+    setPrimeImage(event.target.files[0])
+  }
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const formData = new FormData()
+      // add.age = undefined 
+      // if (add.age !== undefined && add.age !== null && add.age !== '') {
+      //   const ageNumber = parseInt(add.age);
+      //   console.log(ageNumber);
+      // } else {
+      //   console.log("L'âge n'est pas défini ou n'est pas un nombre valide.");
+      // }
+      formData.append('nom', add.nom)
+      formData.append('age', add.age)
+      formData.append('slug', add.slug)
+      // formData.append('armes', add.armes)    
+      // formData.append('fruit_du_demon', add.fruit_du_demon)    
+      // formData.append('taille', add.taille)    
+      // formData.append('reve', add.reve)  
+      // formData.append('prime', add.prime) 
+      // formData.append('affiliations', add.affiliations)
+      formData.append('files', profileImage)
+      formData.append('files', coverImage)
+      formData.append('files', primeImage) 
+  
 
-    const data = new FormData()
-    data.append('nom', add.nom)    
-    data.append('armes', add.armes)    
-    data.append('fruit_du_demon', add.fruit_du_demon)    
-    data.append('taille', add.taille)    
-    data.append('age', add.age)  
-    data.append('genre', add.genre)  
-    data.append('reve', add.reve)  
-    data.append('prime', add.prime) 
-    data.append('affiliations', add.affiliations)
-    data.append('image', add.image)
-    data.append('poster_path', add.poster_path)
-    data.append('prime_poster', add.prime_poster) 
-    data.append('slug', add.slug)
-    
-    const url = "http://localhost:8001/onepiece"
-    fetch(url, {
+    // const url = "http://localhost:8001/onepiece"
+    fetch("http://localhost:8001/Onepiece", {
       method: "POST",
-      body: data
+      body: formData
     })
-      .then(reponse => reponse.json())
-      .then(data => setAdd(data))
-      .catch(error => console.log(error))
+      .then(reponse => {
+        if (reponse.ok) {
+          return reponse.json()
+      }
+      throw new Error("Something went wrong");
+      })
+      .then(data => {
+        console.log(data)
+        setAdd(data)
+      }).catch((error) => {
+        console.log(error)
+      })
   }
 
   const handleChange = (event) => {
-    const { name, value, files } = event.target;
-    if(name === 'image'){
-      setAdd({...add, [name] : files[0]})
-    } else if (name === "poster_path"){
-      setAdd({...add, [name] : files[1]})
-    } else if (name === 'prime_poster'){
-      setAdd({...add, [name] : files[2]})
-    } else {
-      setAdd({...add, [name] : value})
-    }
-
+    const { name, value } = event.target;
+    setAdd({ ...add, [name]: value })
   }
+
+
+  // if(name === 'image'){
+  //   setAdd({...add, [name] : files[0]})
+  // } else if (name === "poster_path"){
+  //   setAdd({...add, [name] : files[1]})
+  // } else if (name === 'prime_poster'){
+  //   setAdd({...add, [name] : files[2]})
+  // } else {
+  //   setAdd({...add, [name] : value})
+  // }
+
 
 
   return (
     <div>
       <h1>Add Perso</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-add">
         <label htmlFor="name">Name:</label>
-        <input type="text" name="nom"  onChange={handleChange} />
-        <label htmlFor="email">Age : </label>
+        <input type="text" name="nom" onChange={handleChange} />
+
+        <label htmlFor="name">Slug:</label>
+        <input type="text" name="slug" onChange={handleChange} />
+
+        <label htmlFor="text">Age : </label>
         <input type="number" name="age" onChange={handleChange} />
-        <label htmlFor="email">Image : </label>
-        <input type="file" name="poster_path" onChange={handleChange}></input>
+
+        <label htmlFor="email">Profil Image : </label>
+        <input type="file" name="files" onChange={handleProfileImageChange}></input>
         <label htmlFor="email">Poster Image : </label>
-        <input type="file" name="image" onChange={handleChange}></input>
+        <input type="file" name="files" onChange={handleCoverImageChange}></input>
         <label htmlFor="email">Prime Image : </label>
-        <input type="file" name="prime_poster" onChange={handleChange}></input>
+        <input type="file" name="files" onChange={handlePrimeImageChange}></input>
+
+
         <button type="submit" className='btn-submit'>Envoyer</button>
       </form>
     </div>
