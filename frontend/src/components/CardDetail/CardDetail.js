@@ -1,17 +1,20 @@
 import React from 'react'
 import "../CardDetail/CardDetail.css"
+import CardForm from "../../components/CardForm/CardForm";
+import Editer from '../Editer/Editer';
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function CardDetail() {
 
     const [list, setList] = useState(null)
     const [loading, setLoading] = useState(true);
-    const { slug } = useParams()
+    const { id } = useParams()
 
     const listPerso = () => {
-        fetch(`http://localhost:8001/onepiece/${slug}`)
+        fetch(`http://localhost:8001/onepiece/${id}`)
             .then((reponse) => {
                 if (reponse.ok) {
                     return reponse.json()
@@ -31,13 +34,15 @@ function CardDetail() {
     useEffect(() => {
         listPerso()
         window.scrollTo(0, 0);
-    }, [slug])
+    }, [id])
 
     if (loading) {
         return <div>Chargement...</div>;
     }
 
     return (
+        <>
+        
         <div className='card-detail'>
             <div className='card-detail-poster'>
                 <img src={list.poster_path} alt="" srcset="" />
@@ -53,12 +58,14 @@ function CardDetail() {
                 <p><span>Age :</span>{list.age}ans</p>
                 <p><span>Genre : </span>{list.genre}</p>
                 <p><span>Reve : </span>{list.reve}</p>
-                <p><span>Affiliations : </span>{list.affiliations[0]}{list.affiliations[1]}</p>
+                <p><span>Affiliations : </span>{list.affiliations}</p>
                 </div>
             </div>
-         
-
         </div>
+        <h2>Editer</h2>
+        <Link to={`/perso/${id}/edit`}>Modifier</Link>
+        {/* <CardForm id={id} perso={list} setList={setList} refresh={listPerso} /> */}
+        </>
     )
 }
 
