@@ -18,12 +18,14 @@ const singleCrew = async (req, res) => {
  const crewPost = async (req, res) => {
     console.log(req.files)
     req.body.image = `http://localhost:8001/uploads/${req.files[0].filename}`
-    req.body.poster_path = `http://localhost:8001/uploads/${req.files[1].filename}`
-    req.body.prime_poster = `http://localhost:8001/uploads/${req.files[2].filename}`
+    req.body.poster_path = `http://localhost:8001/uploads/${req.files[0].filename}`
+    req.body.prime_poster = `http://localhost:8001/uploads/${req.files[0].filename}`
     const crew = new MugiwaraModel(req.body)
     try {
        await crew.save()
-        res.json(crew)
+        res.json({
+            message : crew
+        })
     } catch (error) {
        res.status(500).json({ message: error.message});
     }

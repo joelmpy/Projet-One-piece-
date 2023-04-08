@@ -4,10 +4,12 @@ const PORT = process.env.PORT || 8001
 const mongoose = require('mongoose')
 const cors = require('cors')
 const routeur = require('./routes/route')
+const bodyParser = require("body-parser")
 const path = require('path')
 
 // use //
 app.use(express.json())
+app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 app.use('/', routeur)
