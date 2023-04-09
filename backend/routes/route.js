@@ -28,7 +28,7 @@ router.get('/Onepiece/:slug', singleCrew)
 router.post('/Onepiece', upload.array('files'), crewPost)
 
 // method Patch //
-router.patch('/Onepiece/:id', patchCrew)
+router.patch('/Onepiece/:id',  upload.array('files'), patchCrew)
 
 
 // method Delete // 

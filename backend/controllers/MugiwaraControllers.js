@@ -16,12 +16,12 @@ const singleCrew = async (req, res) => {
  }
 
  const crewPost = async (req, res) => {
-    console.log(req.files)
-    req.body.image = `http://localhost:8001/uploads/${req.files[0].filename}`
-    req.body.poster_path = `http://localhost:8001/uploads/${req.files[0].filename}`
-    req.body.prime_poster = `http://localhost:8001/uploads/${req.files[0].filename}`
-    const crew = new MugiwaraModel(req.body)
-    try {
+     try {
+        console.log(req.files)
+        req.body.image = `http://localhost:8001/uploads/${req.files[0].filename}`
+        req.body.poster_path = `http://localhost:8001/uploads/${req.files[1].filename}`
+        req.body.prime_poster = `http://localhost:8001/uploads/${req.files[2].filename}`
+        const crew = new MugiwaraModel(req.body)
        await crew.save()
         res.json({
             message : crew
@@ -33,15 +33,22 @@ const singleCrew = async (req, res) => {
 
 
  const patchCrew = async (req, res) => {
-    const crew = await MugiwaraModel.findByIdAndUpdate(req.params.id, req.body)
-    await crew.save()
-    if(!crew){
+    try {
+        console.log(req.files);
+            // req.body.image = `http://localhost:8001/uploads/${req.files[0].filename}`
+            // req.body.poster_path = `http://localhost:8001/uploads/${req.files[1].filename}`
+            req.body.prime_poster = `http://localhost:8001/uploads/${req.files[0].filename}`
+        const crew = await MugiwaraModel.findByIdAndUpdate(req.params.id, req.body)
+        await crew.save()
+        res.status(200)
+        res.json(crew)
+         console.log(`Patch change ==> ${crew}`)
+
+    } catch (error){
         res.status(500).send('Serveur a pas udapte la page')
     }
-    res.status(200)
-    res.json(crew)
-       console.log(`Patch change ==> ${crew}`)
- }
+}
+
 
 
 
