@@ -51,7 +51,7 @@
 
 .card-poster_path .poster_path_prime {
     width:300px;
-    height: auto;
+    max-height: 450px;
     object-fit: cover;
 }
 
